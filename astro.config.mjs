@@ -10,10 +10,11 @@ function defaultLayoutPlugin() {
   return function (tree, file) {
     // 获取文件路径
     const filePath = file.history[0];
-    console.log("🚀 ~ file: astro.config.mjs:13 ~ filePath:", filePath);
+    console.log("👻🤖👾 ~ file:astro.config method: line:31 -----file.data.astro.frontmatter:", file.data.astro.frontmatter)
 
     // 在md文件的头部添加post.astro 设置布局组件
     file.data.astro.frontmatter.layout = "@layouts/post.astro";
+
 
     // 头图放到文档中的第一行，会自动帮你处理，也可以用 frontmatter 方式，赋值给 pic 字段
     // tree.children[0]?.value 是用来获取文件的第一行内容
@@ -47,6 +48,7 @@ function defaultLayoutPlugin() {
       );
       file.data.astro.frontmatter.date = createDate;
     }
+
   };
 }
 

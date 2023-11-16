@@ -19,6 +19,7 @@ const currentPage = pageUrl.pathname;
 let title = parseTitle(currentPage);
 
 const { date, pic, desc, url, twitterImg } = Astro.props.frontmatter;
+console.log("👻🤖👾 ~ file:post method: line:22 -----defaultLayoutPlugin:", defaultLayoutPlugin)
 const content = {
   title,
   image: pic,
